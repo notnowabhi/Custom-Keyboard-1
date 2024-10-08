@@ -18,10 +18,24 @@
 */
 -->
 
-<newPackage2.LatinKeyboardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/keyboard"
-        android:layout_alignParentBottom="true"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/emoji_row"
+        android:id="@+id/emoji_row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:background="#FF0000"
+    />
+
+    <newPackage2.LatinKeyboardView
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+</LinearLayout>
+
+
